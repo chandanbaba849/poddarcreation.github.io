@@ -1,41 +1,407 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Poddar Creation</title>
-<link rel="stylesheet" href="style.css">
+<title>Poddar Creation | Flex & Banner Printing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fc;
+color:#222;
+}
+
+header{
+background:#0A3D91;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-icon{
+width:60px;
+height:60px;
+border-radius:50%;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+font-weight:700;
+color:#0A3D91;
+}
+
+.logo-text h2{
+color:#fff;
+font-size:28px;
+}
+
+.logo-text p{
+color:#dbe7ff;
+font-size:13px;
+}
+
+nav a{
+text-decoration:none;
+color:#fff;
+margin-left:25px;
+font-weight:500;
+}
+
+.hero{
+background:linear-gradient(rgba(10,61,145,.85),rgba(10,61,145,.85)),
+url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1600');
+background-size:cover;
+background-position:center;
+min-height:80vh;
+display:flex;
+align-items:center;
+padding:0 8%;
+}
+
+.hero-content{
+max-width:700px;
+color:#fff;
+}
+
+.hero-content h1{
+font-size:58px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:18px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+margin-right:10px;
+}
+
+.btn-primary{
+background:#ff9800;
+color:#fff;
+}
+
+.btn-secondary{
+background:#fff;
+color:#0A3D91;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+padding:60px 8%;
+background:#fff;
+}
+
+.stat-box{
+background:#f7f9ff;
+padding:30px;
+text-align:center;
+border-radius:12px;
+box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.stat-box h3{
+font-size:34px;
+color:#0A3D91;
+}
+
+.section{
+padding:80px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:40px;
+color:#0A3D91;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:#fff;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#0A3D91;
+margin-bottom:15px;
+}
+
+.portfolio{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.portfolio-item{
+background:#fff;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.portfolio-item img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.portfolio-item h4{
+padding:15px;
+}
+
+.contact{
+background:#0A3D91;
+color:#fff;
+text-align:center;
+padding:80px 8%;
+}
+
+.contact h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.contact p{
+margin-bottom:10px;
+font-size:18px;
+}
+
+footer{
+background:#06255b;
+color:#fff;
+text-align:center;
+padding:20px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:15px 22px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:38px;
+}
+
+nav{
+display:none;
+}
+}
+</style>
 </head>
+
 <body>
 
 <header>
-<h1>PODDAR CREATION</h1>
-<p>Flex | Banner | Vinyl Printing Services</p>
-<a href="https://wa.me/919060718860" class="btn">Order on WhatsApp</a>
+
+<div class="logo">
+<div class="logo-icon">PC</div>
+
+<div class="logo-text">
+<h2>Poddar Creation</h2>
+<p>Flex & Banner Printing</p>
+</div>
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</nav>
+
 </header>
 
-<section>
-<h2>About Us</h2>
-<p>Poddar Creation is a professional printing service based in Seraikella, Jamshedpur, Jharkhand.</p>
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Premium Flex & Banner Printing Services</h1>
+
+<p>
+High Quality Printing Solutions for Businesses, Government Campaigns,
+Political Events, Birthday Banners, Wedding Backdrops and Outdoor Advertising.
+</p>
+
+<a href="https://wa.me/919060718860" class="btn btn-primary">
+Order on WhatsApp
+</a>
+
+<a href="#services" class="btn btn-secondary">
+View Services
+</a>
+
+</div>
+
 </section>
 
-<section>
-<h2>Services</h2>
-<ul>
-<li>Flex Banner Printing</li>
-<li>Vinyl Printing</li>
-<li>Birthday Banner Printing</li>
-<li>Political Banner Printing</li>
-<li>Wedding Backdrops</li>
-<li>Shop Branding</li>
-</ul>
+<section class="stats">
+
+<div class="stat-box">
+<h3>10 Ft</h3>
+<p>Wide Printing Machine</p>
+</div>
+
+<div class="stat-box">
+<h3>1000+</h3>
+<p>Happy Customers</p>
+</div>
+
+<div class="stat-box">
+<h3>HD</h3>
+<p>Print Quality</p>
+</div>
+
+<div class="stat-box">
+<h3>Fast</h3>
+<p>Delivery Service</p>
+</div>
+
 </section>
 
-<section>
-<h2>Contact</h2>
-<p>Phone: 9060718860</p>
-<p>Address: Seraikella, Jamshedpur, Jharkhand</p>
+<section class="section" id="services">
+
+<div class="section-title">
+<h2>Our Services</h2>
+</div>
+
+<div class="services">
+
+<div class="card">
+<h3>Flex Banner Printing</h3>
+<p>High-quality flex printing for all events and businesses.</p>
+</div>
+
+<div class="card">
+<h3>Political Campaign Printing</h3>
+<p>Election banners, welcome gates and campaign materials.</p>
+</div>
+
+<div class="card">
+<h3>Birthday Banner Design</h3>
+<p>Customized birthday flex with photos and premium designs.</p>
+</div>
+
+<div class="card">
+<h3>Wedding Backdrops</h3>
+<p>Beautiful wedding and anniversary backdrop printing.</p>
+</div>
+
+<div class="card">
+<h3>Government Campaigns</h3>
+<p>IEC materials and awareness campaign printing.</p>
+</div>
+
+<div class="card">
+<h3>Shop Branding</h3>
+<p>Signboards, vinyl graphics and advertising solutions.</p>
+</div>
+
+</div>
+
 </section>
+
+<section class="section" id="portfolio">
+
+<div class="section-title">
+<h2>Our Portfolio</h2>
+</div>
+
+<div class="portfolio">
+
+<div class="portfolio-item">
+<img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=900" alt="">
+<h4>Government Awareness Campaign</h4>
+</div>
+
+<div class="portfolio-item">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900" alt="">
+<h4>Business Promotion Banner</h4>
+</div>
+
+<div class="portfolio-item">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900" alt="">
+<h4>Custom Event Flex Design</h4>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Poddar Creation</h2>
+
+<p>📞 9060718860</p>
+
+<p>📍 Seraikella, Jamshedpur, Jharkhand</p>
+
+<p>WhatsApp Orders Available</p>
+
+</section>
+
+<footer>
+© 2026 Poddar Creation | All Rights Reserved
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919060718860">
+WhatsApp
+</a>
 
 </body>
 </html>
